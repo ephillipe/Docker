@@ -14,8 +14,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
 COPY docker/supervisord.conf /etc/supervisor/supervisord.conf
 COPY docker/entrypoint.sh /sbin/entrypoint.sh
 RUN cd /var/www/html ;\
-    wget https://github.com/cachethq/Cachet/archive/v1.1.1.tar.gz ;\
-    tar xzvf v1.1.1.tar.gz --strip-components=1
+    wget https://github.com/cachethq/Cachet/archive/v1.2.0.tar.gz ;\
+    tar xzvf v1.2.0.tar.gz --strip-components=1
 WORKDIR /var/www/html/
 
 # copy the various nginx and supervisor conf (to handle both fpm and nginx)
